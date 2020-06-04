@@ -1,0 +1,175 @@
+/* SUMMARY
+1. GLOBAL
+2. LAYOUT
+3. SECTION
+4. CARD
+*/
+
+/*** 1. GLOBAL ***/
+
+/* Variables
+      ============================= */
+
+:root {
+  --color-primary: #F7505A;
+  --color-black: #090909;
+  --color-white: #ffffff;
+
+  --text-color: var(--color-black);
+
+  /** SECTION **/
+  --section-color: var(--color-white);
+  --section-color-alt: var(--color-black);
+}
+
+/* Base
+      ============================= */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  text-align: center;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #ff6565;
+}
+
+.button {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  border-radius: 3rem;
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: var(--color-primary);
+  box-shadow: 0 0 1rem var(--color-black);
+}
+
+.button:hover,
+.button:active {
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 57%;
+  }
+}
+
+/*** 2. LAYOUT ***/
+
+/* Layout
+      ============================= */
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navbar
+      ============================= */
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+
+.nav-item + .nav-item {
+  margin: 0 0 0 4rem;
+}
+
+.nav-link {
+  color: var(--color-white);
+}
+
+/* Header
+      ============================= */
+
+.header {
+  padding: 2rem 0 0;
+  position: absolute;
+  z-index: 3;
+  background: transparent;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo img {
+  /* transform: scale(0.25); */
+  width: 15rem;
+  height: auto;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+/*** 3. SECTION ***/
+
+/* Section (all styles)
+      ============================= */
+
+/* .section {
+  color: var(--section-color);
+} */
+
+.section-body {
+  font-size: 1.3rem;
+}
+
+.section-title {
+  font-size: 3rem;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+}
+
+/* Section HERO
+      ============================= */
+
+.section-hero {
+  position: relative;
+  color: var(--section-color);
+}
+
+.hero-homepage {
+  background-image: url(images/headphones_hero_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-hero .section-body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
